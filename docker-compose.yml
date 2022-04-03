@@ -1,0 +1,23 @@
+version: "3"
+services:
+  database:
+    image: "postgres:latest"
+    container_name: themovie-db-local
+    restart: always
+    # volumes:
+    #     - ./docker-postgresql-multiple-databases:/docker-entrypoint-initdb.d
+    environment:
+        - POSTGRES_PASSWORD=password
+        - POSTGRES_DB=themovie
+    ports:
+      - "5433:5432"
+
+  # server:
+    # image: "node:12-alpine"
+    # build: .
+    # restart: always
+    # ports: 
+    #   - "3011:3010"
+    # env_file: config-test.env
+    # depends_on: 
+    #   - database

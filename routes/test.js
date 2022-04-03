@@ -13,7 +13,7 @@ router.use(function timeLog(req, res, next) {
 })
 // router.use(AuthMiddleWare.isAuth);
 // define the home page route
-router.get('/', testController.index)
+router.get('/', testController.create)
 // define the about route
 
 router.get('/create', testController.create)

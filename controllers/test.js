@@ -4,7 +4,7 @@ const sequelize = require('../utils/connectDB')
 const User = require('../models/User');
 const UploadMiddleware = require('../middleware/UploadMiddleware');
 
-function create(req, res) {
+async function create(req, res) {
 
     let data = [{
         'name': "Minh",
@@ -15,7 +15,10 @@ function create(req, res) {
         'year': "2021"
     }
     ];
-    response.withMessage("COMMON.SUCCESSFULLY", true, data, res);
+
+    await sequelize.authenticate();
+  console.log('Connection has been established successfully.');
+    // response.withMessage("COMMON.SUCCESSFULLY", true, data, res);
 }
 
 async function index(req, res) {
