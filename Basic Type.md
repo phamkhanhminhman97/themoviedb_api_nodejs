@@ -1,4 +1,5 @@
 
+
 ## Basic Type
  
 * *Built-in types – Kiểu dữ liệu được định nghĩa sẵn
@@ -100,3 +101,52 @@ throw  new  Error(err);
 * `public` `private` `protected`, `readonly`(giá trị không được phép thay đổi)
 ## Static
 * Các method hay properties có thể gọi trực tiếp mà không cần thông một instance 
+## Keyof
+* Lấy ra danh sách các key của dữ liệu nào đó
+`interface  Person  { name: string; age: number };`
+`type  P = keyof  Person;`
+## Typeof
+* Toán tử **typeof** trả về một **string** biểu thị kiểu dữ liệu của một giá trị 
+## Indexed Access Type
+* Truy cập thuộc tính của object bằng cách sử dụng dấu ngoặc vuông [ ]
+	- Dùng [] khi tên thuộc tính có khoảng trắng,
+	- `a['full name']`
+## Conditional Type
+* giúp cho chúng ta có thể tạo ra những type theo điều kiện
+ `type  Example1 = Dog  extends  Animal ? number : string;`
+	  -  Nếu class Dog có kế thừa Animal thì trả về number, ko thì là string
+## Generic Type
+* là việc truyền type vào function, class, interface, như là 1 tham số.
+` interface Student { id: number; name: string }`
+` const arr : Array<Student> = [{id:1, name:'bob'}]`
+* `function identity(arg: number): number {
+    return arg;
+}`
+      - Hàm này chỉ duy nhất sử dụng kiểu number, có thể dung **any** nhưng khó đoán được kiểu gì sẽ trả về
+  `function identity<T>(arg: T): T{  
+return arg;  
+}`
+
+## unknown
+* khi bạn muốn mô tả một dữ liệu mà chưa biết được trước kiểu dữ liệu của nó
+* tuy nhiên khác **any** chúng ta có thể truy cập vào thuộc tính mặc dù không tồn tại của nó, **unknown** thì không
+## Literal Type 
+* Chỉ định một giá trị cụ thể làm kiểu dữ liệu
+` let a : 1`
+## Optional - Default Parameter
+`function  f(x?: number) {
+// ...
+}
+f(); // OK
+f(10); // OK`
+## Overload
+* có nhiều phương thức cùng tên nhưng khác nhau về số lượng tham số hoặc kiểu dữ liệu tham số.
+## Mapped Type
+## Utility Type
+* Partial - Constructs a type with all properties of `Type` set to optional.
+* Required - Constructs a type consisting of all properties of `Type` set to required. The opposite of [`Partial`]
+* Readonly
+* Pick
+* Omit
+
+* 
