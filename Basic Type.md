@@ -131,7 +131,7 @@ return arg;
 }`
 
 ## unknown
-* khi bạn muốn mô tả một dữ liệu mà chưa biết được trước kiểu dữ liệu của nó
+* khi muốn mô tả một dữ liệu mà chưa biết được trước kiểu dữ liệu của nó
 * tuy nhiên khác **any** chúng ta có thể truy cập vào thuộc tính mặc dù không tồn tại của nó, **unknown** thì không
 ## Literal Type 
 * Chỉ định một giá trị cụ thể làm kiểu dữ liệu
@@ -162,3 +162,6 @@ f(10); // OK`
 * for/in, forEach bỏ quả phần tử rỗng
 * for, for/of thì không bỏ qua phần tử rỗng
 * forEach không dùng await
+## Template Litertal
+* Chèn giá trị của biến vào chuỗi
+` let a = 'Test ${variable} `
