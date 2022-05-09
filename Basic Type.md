@@ -10,9 +10,10 @@
    * Khi muốn lưu một biến mà không biết kiểu của  biến đó *
    * `let person: any = "Foo"`;
 ## Void
-*   Void cho biết sự vắng mặt của kiểu với biến. Nó hoạt động như đối lập với bất kỳ kiểu nào. Nó hữu ích cho các hàm không trả về giá trị.
+*   hàm sẽ không trả về giá trị gì.
+* chỉ có thể gán null và undefined cho void
 ## Type annotation - Kiểu chú thích
-  * Gán một kiểu cho một giá trị rõ raàng*
+  * Gán một kiểu cho một giá trị rõ ràng*
   * `let with : number = 1080; `*
 ## Type inference- Kiểu suy luận
 
@@ -27,7 +28,7 @@
 	}`
 ## Type Alias
 *    Cho phép đặt lại tên cho một kiểu dữ liệu
- ` type alphanumberic = number`
+ ` type alphanumberic = number`| string
  > //bad
  `let teacher: {name: string, age:number}`
  `let student: {name: string, age:number}`
@@ -38,7 +39,9 @@
  * Giúp giảm trùng lặp và tái sử dụng các kiểu dữ liệu một cách thống nhất
 ## Union Type
 *    Một biến có thể kết hợp nhiều kiểu dữ liệu với nhau
-` let id : string | number` 
+## Intersection Type
+*    kết hợp nhiều kiểu dữ liệu, kiểu mới có tất cả tính năng của các kiểu hiện có
+` let id : string & number` 
 ## Array
 * Là một kiểu dữ liệu đặc biệt được sử dụng để lưu trữ nhiều giá trị của nhiều kiểu dữ liệu khác nhau.
 ` let a = ['foo', 'bar' ,1, 2]`
@@ -148,5 +151,14 @@ f(10); // OK`
 * Readonly
 * Pick
 * Omit
-
-* 
+## Decorater
+* Class Decorator: được khai báo trước class và nó aplly cho constructor của class
+* Method-Access-Property-Parameter Decorator: nhận vào 3 param (targer, propertyKey, descriptor)
+* Sẽ được gọi khi khởi tại instance
+## for - for/in - for/of - forEach
+* for, for/in truy cập đến index cần arr[index] để truy cập tới phần tử
+* for/of, forEach truy cập đến phần tử 
+* for/in lặp qua cả key không phải số
+* for/in, forEach bỏ quả phần tử rỗng
+* for, for/of thì không bỏ qua phần tử rỗng
+* forEach không dùng await
