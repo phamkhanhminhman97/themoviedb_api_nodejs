@@ -9,10 +9,23 @@
 ## BASIC QUERY
 * SELECT	
 * Column alias
-	+ The AS keyword is optional.
-	+ Use double quotes (“) to surround a column alias that contains spaces.
+	+ AS keyword là optional
+	+ Sử dụng(“) khi alias chứa khoảng trắng
 * ORDER BY
-	+ Use the ASC option to sort rows in ascending order and DESC option to sort rows in descending order. The ORDER 	BY clause uses the ASC option by default.
+	+ Mặc định là ASC
 	+ Use NULLS FIRST and NULLS LAST options to explicitly specify the order of NULL with other non-null values
 * DISTINCT
-	+ 
+	+ provide you with a clause that removes duplicate rows in the result set
+* GROUP BY
+	+ Tổng hợp các bản ghi thành các nhóm
+* HAVING
+ 	+ Không thể dùng alias để tham chiếu đã được chỉ định ở mệnh để SELECT
+ 	`SELECT
+    ...
+    aggregate_function (column_name3) column_alias
+	FROM
+    ...
+	GROUP BY
+    ...
+	HAVING
+    column_alias > value;`
