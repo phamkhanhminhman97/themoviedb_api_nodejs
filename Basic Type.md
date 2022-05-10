@@ -152,7 +152,7 @@ f(10); // OK`
 * Pick
 * Omit
 ## Decorater
-* Class Decorator: được khai báo trước class và nó aplly cho constructor của class
+* Class Decorator: được khai báo trước class và nó apply cho constructor của class
 * Method-Access-Property-Parameter Decorator: nhận vào 3 param (targer, propertyKey, descriptor)
 * Sẽ được gọi khi khởi tại instance
 ## for - for/in - for/of - forEach
@@ -165,3 +165,7 @@ f(10); // OK`
 ## Template Litertal
 * Chèn giá trị của biến vào chuỗi
 ` let a = 'Test ${variable} `
+## Erased type
+* Khi compile sang Js thì các type annotation sẽ mất
+## Destructuring
+* Object `let person = {id:1, name:'abc'}` `const {id,name} = person`
