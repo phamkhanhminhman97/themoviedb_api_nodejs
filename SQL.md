@@ -4,7 +4,9 @@
 * GROUP BY clause
 * HAVING clause
 * SELECT clause
-* ORDER BY clause 
+* DISTINCT clause
+* ORDER BY clause
+* LIMIT clause 
 
 ## BASIC QUERY
 * SELECT	
@@ -28,4 +30,11 @@
 	GROUP BY
     ...
 	HAVING
-    column_alias > value;`
+    column_alias > value;` //wrong
+
+## Table Relation
+* INNER JOIN trả về các hàng khi có ít nhất 1 giá trị ở cả 2 bảng
+* LEFT JOIN trả về tất cả các hàng ở bảng bên trái và các điều kiện đúng ở bảng bên phải (không thoã thì NULL)
+* RIGHT JOIN trả về tất cả các hàng ở bảng bên phải và các điều kiện đúng ở bảng bên trái (không thoã thì NULL)
+* FULL JOIN trả về là tập hợp tất cả dữ liệu chung và riêng giữa thông qua điều kiện kết hợp hai bảng.
+
